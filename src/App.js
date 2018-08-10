@@ -1,6 +1,12 @@
 import React, { Component } from 'react';
 import './App.css';
 import Api from "./Api.js"
+import Comedy from './Comedy';
+import Romance from './Romance';
+import Horror from './Horror';
+import Animation from './Animation';
+import Action from './Action';
+import Drama from './Drama';
 
 class App extends Component {
   render() {
@@ -13,6 +19,12 @@ class App extends Component {
           To get started, edit <code>src/App.js</code> and save to reload.
         </p>
         <Api />
+        <Comedy />
+        <Romance />
+        <Horror />
+        <Animation />
+        <Action />
+        <Drama />
       </div>
     );
   }
