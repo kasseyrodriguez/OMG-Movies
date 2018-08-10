@@ -16,8 +16,8 @@ export default class Romance extends Component {
 
       componentDidMount(){
         const API_K = API_KEY;
-          for(let i = 1; i < 3; i++){
-         axios.get(`https://api.themoviedb.org/3/discover/movie?api_key=${API_K}&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=${i}&primary_release_date.gte=1990&primary_release_date.lte=1999&with_genres=10749`)
+         
+         axios.get(`https://api.themoviedb.org/3/discover/movie?api_key=${API_K}&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=1&primary_release_date.gte=1990&primary_release_date.lte=1999&with_genres=10749`)
         .then(json => {
 
           this.setState({romanceMovies:json.data, romanceStore: json.data})
@@ -25,7 +25,7 @@ export default class Romance extends Component {
           console.log(this.state.romanceMovies)
      
         })
-          }
+          
 
     }
  
