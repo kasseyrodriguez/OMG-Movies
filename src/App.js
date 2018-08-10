@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import Api from "./Api.js"
+import Comedy from './Comedy';
 
 class App extends Component {
   render() {
@@ -13,6 +14,7 @@ class App extends Component {
           To get started, edit <code>src/App.js</code> and save to reload.
         </p>
         <Api />
+        <Comedy />
       </div>
     );
   }
