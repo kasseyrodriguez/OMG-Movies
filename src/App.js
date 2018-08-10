@@ -4,6 +4,9 @@ import Api from "./Api.js"
 import Comedy from './Comedy';
 import Romance from './Romance';
 import Horror from './Horror';
+import Animation from './Animation';
+import Action from './Action';
+import Drama from './Drama';
 
 class App extends Component {
   render() {
@@ -19,6 +22,9 @@ class App extends Component {
         <Comedy />
         <Romance />
         <Horror />
+        <Animation />
+        <Action />
+        <Drama />
       </div>
     );
   }
