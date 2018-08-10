@@ -1,20 +1,28 @@
 import React, { Component } from 'react';
 import './App.css';
-import Home from "./Home.js"
-
+import Home from "./Home.js";
+import {BrowserRouter} from 'react-router-dom';
+import Route from 'react-router-dom/Route';
 
 
 class App extends Component {
   render() {
     return (
-      <nav>
-      <div className="App">
-        <header className="App-header">
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-      <Home />
-      </div>
-      </nav>
+      <BrowserRouter>
+     <div>
+     <Route path= "/" exact render = {() => {
+         return (<Home />)
+       }
+     }/>
+       
+     <Route path= "/about" exact render = {() => {
+         return (<h1>about</h1>)
+       }
+     }/>
+
+</div>
+
+      </BrowserRouter>
     );
   }
 }
