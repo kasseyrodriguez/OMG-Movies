@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 import Api from "./Api.js"
 import Comedy from './Comedy';
+import Romance from './Romance';
 
 class App extends Component {
   render() {
@@ -15,6 +16,7 @@ class App extends Component {
         </p>
         <Api />
         <Comedy />
+        <Romance />
       </div>
     );
   }
