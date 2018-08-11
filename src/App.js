@@ -1,31 +1,41 @@
 import React, { Component } from 'react';
 import './App.css';
-import Api from "./Api.js"
-import Comedy from './Comedy';
-import Romance from './Romance';
-import Horror from './Horror';
-import Animation from './Animation';
-import Action from './Action';
-import Drama from './Drama';
+import Home from "./Home.js";
+import {BrowserRouter, Link, NavLink} from 'react-router-dom';
+import Route from 'react-router-dom/Route';
+
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
-        <Api />
-        <Comedy />
-        <Romance />
-        <Horror />
-        <Animation />
-        <Action />
-        <Drama />
-      </div>
+      <BrowserRouter>
+     <div>
+
+       <ul>
+         <li>
+         <NavLink to ="/" exact activeStyle= {{color:'green'}}>Home</NavLink>
+
+         </li>
+         <li>
+         <NavLink to ="/about" exact activeStyle= {{color:'green'}}>About</NavLink>
+         </li>
+
+       </ul>
+   
+
+     <Route path= "/" exact render = {() => {
+         return (<Home />)
+       }
+     }/>
+       
+     <Route path= "/about" exact render = {() => {
+         return (<h1>about</h1>)
+       }
+     }/>
+
+    </div>
+
+      </BrowserRouter>
     );
   }
 }
