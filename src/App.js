@@ -13,39 +13,39 @@ class App extends Component {
 
        <ul>
          <li>
-         <NavLink to ="/" exact activeStyle= {{color:'green'}}>Home</NavLink>
+         <NavLink to ="/" exact activeStyle= {{color:'red'}}>Home</NavLink>
 
          </li>
          <li>
-         <NavLink to ="/1990" exact activeStyle= {{color:'green'}}>1990</NavLink>
+         <NavLink to ="/1990" exact activeStyle= {{color:'red'}}>1990</NavLink>
          </li>
          <li>
-         <NavLink to ="/1991" exact activeStyle= {{color:'green'}}>1991</NavLink>
+         <NavLink to ="/1991" exact activeStyle= {{color:'red'}}>1991</NavLink>
          </li>
          <li>
-         <NavLink to ="/1992" exact activeStyle= {{color:'green'}}>1992</NavLink>
+         <NavLink to ="/1992" exact activeStyle= {{color:'red'}}>1992</NavLink>
          </li>
          <li>
-         <NavLink to ="/1993" exact activeStyle= {{color:'green'}}>1993</NavLink>
+         <NavLink to ="/1993" exact activeStyle= {{color:'red'}}>1993</NavLink>
          </li>
          <li>
-         <NavLink to ="/1994" exact activeStyle= {{color:'green'}}>1994</NavLink>
+         <NavLink to ="/1994" exact activeStyle= {{color:'red'}}>1994</NavLink>
          </li>
 
      <li>
-         <NavLink to ="/1995" exact activeStyle= {{color:'green'}}>1995</NavLink>
+         <NavLink to ="/1995" exact activeStyle= {{color:'red'}}>1995</NavLink>
          </li>
          <li>
-         <NavLink to ="/1996" exact activeStyle= {{color:'green'}}>1996</NavLink>
+         <NavLink to ="/1996" exact activeStyle= {{color:'red'}}>1996</NavLink>
          </li>
          <li>
-         <NavLink to ="/1997" exact activeStyle= {{color:'green'}}>1997</NavLink>
+         <NavLink to ="/1997" exact activeStyle= {{color:'red'}}>1997</NavLink>
          </li>
          <li>
-         <NavLink to ="/1998" exact activeStyle= {{color:'green'}}>1998</NavLink>
+         <NavLink to ="/1998" exact activeStyle= {{color:'red'}}>1998</NavLink>
          </li>
          <li>
-         <NavLink to ="/1999" exact activeStyle= {{color:'green'}}>1999</NavLink>
+         <NavLink to ="/1999" exact activeStyle= {{color:'red'}}>1999</NavLink>
          </li>
 
 
