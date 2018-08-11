@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import Home from "./Home.js";
-import {BrowserRouter} from 'react-router-dom';
+import {BrowserRouter, Link, NavLink} from 'react-router-dom';
 import Route from 'react-router-dom/Route';
 
 
@@ -10,6 +10,19 @@ class App extends Component {
     return (
       <BrowserRouter>
      <div>
+
+       <ul>
+         <li>
+         <NavLink to ="/" exact activeStyle= {{color:'green'}}>Home</NavLink>
+
+         </li>
+         <li>
+         <NavLink to ="/about" exact activeStyle= {{color:'green'}}>About</NavLink>
+         </li>
+
+       </ul>
+   
+
      <Route path= "/" exact render = {() => {
          return (<Home />)
        }
@@ -20,7 +33,7 @@ class App extends Component {
        }
      }/>
 
-</div>
+    </div>
 
       </BrowserRouter>
     );
