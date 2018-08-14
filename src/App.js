@@ -5,7 +5,16 @@ import './App.css';
 import Home from "./Home-components/Home.js";
 import {BrowserRouter, NavLink} from 'react-router-dom';
 import Route from 'react-router-dom/Route';
-import Carousel from './Home-components/Carousel.js';
+import Ninetie from './Years-components/Ninetie.js'
+import NinetieOne from './Years-components/NinetieOne.js'
+import NinetieTwo from './Years-components/NinetieTwo.js'
+import NinetieThree from './Years-components/NinetieThree.js'
+import NinetieFour from './Years-components/NinetieFour.js'
+import NinetieFive from './Years-components/NinetieFive.js'
+import NinetieSix from './Years-components/NinetieSix.js'
+import NinetieSeven from './Years-components/NinetieSeven.js'
+import NinetieEight from './Years-components/NinetieEight.js'
+import NinetieNine from './Years-components/NinetieNine.js'
 
 
 
@@ -75,46 +84,46 @@ class App extends Component {
      }/>
        
      <Route path= "/1990" exact render = {() => {
-         return (<h1>Top movies of 1990</h1>)
+         return (<Ninetie/>)
        }
      }/>
          <Route path= "/1991" exact render = {() => {
-         return (<h1>Top movies of 1991</h1>)
+         return (<NinetieOne/>)
        }
      }/>
 
          <Route path= "/1992" exact render = {() => {
-         return (<h1>Top movies of 1992</h1>)
+         return (<NinetieTwo/>)
        }
      }/>
      <Route path= "/1993" exact render = {() => {
-         return (<h1>Top movies of 1993</h1>)
+         return (<NinetieThree/>)
        }
      }/>
      <Route path= "/1994" exact render = {() => {
-         return (<h1>Top movies of 1994</h1>)
+         return (<NinetieFour/>)
        }
      }/>
 
    <Route path= "/1995" exact render = {() => {
-         return (<h1>Top movies of 1995</h1>)
+         return (<NinetieFive/>)
        }
      }/>
          <Route path= "/1996" exact render = {() => {
-         return (<h1>Top movies of 1996</h1>)
+         return (<NinetieSix/>)
        }
      }/>
 
          <Route path= "/1997" exact render = {() => {
-         return (<h1>Top movies of 1997</h1>)
+         return (<NinetieSeven/>)
        }
      }/>
      <Route path= "/1998" exact render = {() => {
-         return (<h1>Top movies of 1998</h1>)
+         return (<NinetieEight/>)
        }
      }/>
      <Route path= "/1999" exact render = {() => {
-         return (<h1>Top movies of 1999</h1>)
+         return (<NinetieNine/>)
        }
      }/>
 
