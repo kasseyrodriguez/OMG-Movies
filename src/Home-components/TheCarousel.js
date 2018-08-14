@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-// import { Carousel} from 'mdbreact';
+import { Carousel} from 'mdbreact';
 
 
-export default class Carousel extends Component {
+export default class TheCarousel extends Component {
 
 
  

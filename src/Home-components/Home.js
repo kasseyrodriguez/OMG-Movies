@@ -6,7 +6,7 @@ import Horror from './Horror';
 import Animation from './Animation';
 import Action from './Action';
 import Drama from './Drama';
-
+import TheCarousel from './TheCarousel.js'
 
 
 
@@ -14,7 +14,7 @@ import Drama from './Drama';
 class Home extends Component {
   render() {
     return (
-      
+      <div>
       <div>
         <Movie />
         <Comedy />
@@ -23,6 +23,9 @@ class Home extends Component {
         <Animation />
         <Action />
         <Drama />
+      </div>
+
+      <TheCarousel />
       </div>
     );
   }
