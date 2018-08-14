@@ -10,30 +10,23 @@ export default class Animation extends Component {
           animationMovies: [],
           animationStore: []
         }
-     
       }
- 
 
       componentDidMount(){
         const API_K = API_KEY;
-          
          axios.get(`https://api.themoviedb.org/3/discover/movie?api_key=${API_K}&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=1&primary_release_date.gte=1990&primary_release_date.lte=1999&with_genres=18`)
-        .then(json => {
-
+         .then(json => {
           this.setState({animationMovies:json.data, animationStore: json.data})
-
           console.log(this.state.animationMovies)
-     
         })
-          
+      }
 
-    }
- 
     render(){
-     
-return(
-<h1>carosel of Most popular drama of the decade</h1>
 
- )
- }
+      return(
+
+        <h1>carosel of Most popular drama of the decade</h1>
+
+      )
+    }
 }
