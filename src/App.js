@@ -3,7 +3,7 @@ import LandingPage from './Components/Landing/Landing.js';
 import NavbarFeatures from './Components/NavBar.js';
 import './App.css';
 import Home from "./Home-components/Home.js";
-import {BrowserRouter, Link, NavLink} from 'react-router-dom';
+import {BrowserRouter, NavLink} from 'react-router-dom';
 import Route from 'react-router-dom/Route';
 
 
@@ -20,6 +20,7 @@ class App extends Component {
 
       <BrowserRouter>
      <div>
+       
 
        <ul>
      
