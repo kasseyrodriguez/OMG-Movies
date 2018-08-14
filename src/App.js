@@ -12,11 +12,8 @@ class App extends Component {
   render() {
     return (
 
-      <div>
-      <div className="App">
-        <NavbarFeatures/>
-        <LandingPage></LandingPage>
-      </div>
+      
+   
 
       <BrowserRouter>
      <div>
@@ -65,7 +62,10 @@ class App extends Component {
        </ul>
    
        <Route path= "/" exact render = {() => {
-         return (<h1>Landing Page</h1>)
+         return (   <div className="App">
+        <NavbarFeatures/>
+        <LandingPage/>
+      </div>)
        }
      }/>
      <Route path= "/Home" exact render = {() => {
@@ -126,7 +126,7 @@ class App extends Component {
     </div>
 
       </BrowserRouter>
-      </div>
+    
 
     );
   }
