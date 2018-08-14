@@ -32,7 +32,7 @@ export default class Romance extends Component {
     render(){
      
 return(
-<h1>carosel of Top romance of the decade</h1>
+<h1>carosel of Most popular romance of the decade</h1>
 
  )
  }

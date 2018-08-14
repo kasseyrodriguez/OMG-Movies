@@ -9,7 +9,7 @@ export default class NinetieSix extends Component {
     render(){
      
 return(
-<h1>Top movies of 1996</h1>
+<h1>Most popular movies of 1996</h1>
 
  )
  }

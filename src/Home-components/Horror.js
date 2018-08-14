@@ -32,7 +32,7 @@ export default class Horror extends Component {
     render(){
      
 return(
-<h1>carosel of Top horror of the decade</h1>
+<h1>carosel of Most popular horror of the decade</h1>
 
  )
  }

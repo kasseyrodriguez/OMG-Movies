@@ -9,7 +9,7 @@ export default class NinetieFour extends Component {
     render(){
      
 return(
-<h1>Top movies of 1994</h1>
+<h1>Most popular movies of 1994</h1>
 
  )
  }

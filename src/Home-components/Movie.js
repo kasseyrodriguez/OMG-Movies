@@ -34,7 +34,7 @@ export default class Movie extends Component {
     render(){
      
 return(
-<h1>carosel of Top movies of the decade</h1>
+<h1>carosel of Most popular of the decade</h1>
 
  )
  }

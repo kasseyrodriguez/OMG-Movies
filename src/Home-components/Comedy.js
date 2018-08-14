@@ -32,7 +32,7 @@ export default class Comedy extends Component {
     render(){
      
 return(
-<h1>carosel of Top comedy of the decade</h1>
+<h1>carosel of Most popular Comedy of the decade</h1>
 
  )
  }
