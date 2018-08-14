@@ -32,7 +32,7 @@ export default class Animation extends Component {
     render(){
      
 return(
-<h1>carosel of Top drama of the decade</h1>
+<h1>carosel of Most popular drama of the decade</h1>
 
  )
  }
