@@ -12,6 +12,7 @@ class App extends Component {
   render() {
     return (
 
+      <div>
       <div className="App">
         <NavbarFeatures/>
         <LandingPage></LandingPage>
@@ -124,6 +125,7 @@ class App extends Component {
     </div>
 
       </BrowserRouter>
+      </div>
 
     );
   }
