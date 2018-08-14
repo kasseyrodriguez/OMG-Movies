@@ -5,6 +5,7 @@ import './App.css';
 import Home from "./Home-components/Home.js";
 import {BrowserRouter, NavLink} from 'react-router-dom';
 import Route from 'react-router-dom/Route';
+import Carousel from './Home-components/Carousel.js';
 
 
 
@@ -14,7 +15,7 @@ class App extends Component {
 
       
    
-
+      
       <BrowserRouter>
      <div>
        
@@ -63,9 +64,9 @@ class App extends Component {
    
        <Route path= "/" exact render = {() => {
          return (   <div className="App">
-        <NavbarFeatures/>
-        <LandingPage/>
-      </div>)
+                     <NavbarFeatures/>
+                     <LandingPage/>
+                        </div>)
        }
      }/>
      <Route path= "/Home" exact render = {() => {
@@ -116,7 +117,6 @@ class App extends Component {
          return (<h1>Top movies of 1999</h1>)
        }
      }/>
-
 
 
 
