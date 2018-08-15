@@ -1,10 +1,8 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import API_KEY from './config.js'
-import Coverflow from 'react-coverflow';
-import { StyleRoot } from 'radium';
 import './Comedy.css'
-
+import TheCarousel from "./TheCarousel.js"
 
 
 const _handleClick = () => {
@@ -41,41 +39,14 @@ export default class Comedy extends Component {
       }
 
     render(){
-          const { posters } = this.state;
+ 
 
         return(
 
-          <div>
-            <StyleRoot>
-                <Coverflow
-                  displayQuantityOfSide={2}
-                  navigation
-                  infiniteScroll
-                  enableHeading
-                  media={{
-                    '@media (max-width: 900px)': {
-                      width: '600px',
-                      height: '300px'
-                    },
-                    '@media (min-width: 900px)': {
-                      width: '960px',
-                      height: '600px'
-                    }
-                  }}
-                >
-                {
-                  posters.map( (poster) => {
-                    return(
-                      <div key={poster.id} className="item">
-                        <img src={`https://image.tmdb.org/t/p/w300_and_h450_bestv2${poster.poster_path}`} alt="pic" style={{height: '150px', width: '100%'}}/>
-                      </div>
-                    )
-                  })
-                 }
-                </Coverflow>
-              </StyleRoot>
-          <h1>carosel of Most popular Comedy of the decade</h1>
-          </div>
+       <div>
+            <h1>hello</h1>
+            <TheCarousel posters= {this.state.posters} />
+        </div>
 
         )
       }
