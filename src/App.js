@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import LandingPage from './Components/Landing/Landing.js';
 import NavbarFeatures from './Components/NavBar.js';
-import './App.css';
+import './css/App.css';
 import Home from "./Home-components/Home.js";
 import {BrowserRouter, NavLink} from 'react-router-dom';
 import Route from 'react-router-dom/Route';
@@ -24,9 +24,7 @@ class App extends Component {
 
       <BrowserRouter>
      <div>
-
        <ul>
-   
          <li>
          <NavLink to ="/Home" exact activeStyle= {{color:'red'}}>Home</NavLink>
 
@@ -47,7 +45,7 @@ class App extends Component {
          <NavLink to ="/1994" exact activeStyle= {{color:'red'}}>1994</NavLink>
          </li>
 
-     <li>
+         <li>
          <NavLink to ="/1995" exact activeStyle= {{color:'red'}}>1995</NavLink>
          </li>
          <li>

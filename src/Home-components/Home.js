@@ -6,7 +6,7 @@ import Horror from './Horror';
 import Animation from './Animation';
 import Action from './Action';
 import Drama from './Drama';
-import TheCarousel from './TheCarousel.js'
+
 
 
 
@@ -31,7 +31,6 @@ class Home extends Component {
           <Drama />
           <hr/>
         </div>
-        <TheCarousel />
       </div>
     );
   }

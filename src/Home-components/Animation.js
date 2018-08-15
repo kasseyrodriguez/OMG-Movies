@@ -30,6 +30,7 @@ export default class Animation extends Component {
     }
 
     render(){
+
       const { posters } = this.state;
 
       return(
@@ -66,6 +67,7 @@ export default class Animation extends Component {
               </a>
             </div>
           </div>
+
 
         )
       }
