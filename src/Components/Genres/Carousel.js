@@ -1,13 +1,11 @@
 import React, { Component } from 'react';
 import Coverflow from 'react-coverflow';
 import { StyleRoot } from 'radium';
-import './carousel.css'
+import '../../css/Carousel.css'
 
-export default class TheCarousel extends Component {
-
+export default class Carousel extends Component {
 
   render(){
-    // const { posters } = this.state;
 
   return(
 
@@ -40,7 +38,7 @@ export default class TheCarousel extends Component {
            }
           </Coverflow>
         </StyleRoot>
-    
+
     </div>
 
   )

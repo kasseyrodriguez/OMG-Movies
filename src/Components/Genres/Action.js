@@ -1,9 +1,8 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-import API_KEY from './config.js'
+import API_KEY from '../../config.js'
 import View from './View.js'
-import TheCarousel from './TheCarousel.js';
-
+import Carousel from './Carousel.js';
 
 
 export default class Action extends Component {
@@ -33,14 +32,12 @@ export default class Action extends Component {
 
     render(){
 
-
-
       return(
 
         <div>
-
-            <TheCarousel posters= {this.state.posters} />
-            <View actionMovies= {this.state.actionMovies} />
+          <h1><strong>Carousel of Most Popular Animation of the Decade</strong></h1>
+          <Carousel posters= {this.state.posters} />
+          <View actionMovies= {this.state.actionMovies} />
         </div>
       )
     }

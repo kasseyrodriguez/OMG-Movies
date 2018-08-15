@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Movie from "./Movie.js"
+import Movie from './Movie'
 import Comedy from './Comedy';
 import Romance from './Romance';
 import Horror from './Horror';
@@ -8,10 +8,7 @@ import Action from './Action';
 import Drama from './Drama';
 
 
-
-
-
-class Home extends Component {
+export default class Genre extends Component {
   render() {
     return (
       <div>
@@ -35,5 +32,3 @@ class Home extends Component {
     );
   }
 }
-
-export default Home;
