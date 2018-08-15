@@ -17,12 +17,19 @@ class Home extends Component {
       <div>
         <div>
           <Movie />
+          <hr/>
           <Comedy />
+          <hr/>
           <Romance />
+          <hr/>
           <Horror />
+          <hr/>
           <Animation />
+          <hr/>
           <Action />
+          <hr/>
           <Drama />
+          <hr/>
         </div>
       </div>
     );
