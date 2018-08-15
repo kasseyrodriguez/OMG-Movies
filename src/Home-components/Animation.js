@@ -1,9 +1,8 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import API_KEY from './config.js'
-import Coverflow from 'react-coverflow';
-import { StyleRoot } from 'radium';
-import './carousel.css'
+import TheCarousel from './TheCarousel.js';
+
 
 
 export default class Animation extends Component {
@@ -34,14 +33,16 @@ export default class Animation extends Component {
 
     render(){
 
-      const { posters } = this.state;
+
 
       return(
 
-
-       
+          <div>
           <h1><strong>Carousel of Most Popular Animation of the Decade</strong></h1>
 
+           <TheCarousel posters= {this.state.posters} />
+
+          </div>
 
 
         )

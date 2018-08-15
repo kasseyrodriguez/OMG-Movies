@@ -1,9 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import API_KEY from './config.js'
-import Coverflow from 'react-coverflow';
-import { StyleRoot } from 'radium';
-import './carousel.css'
+import TheCarousel from './TheCarousel.js';
 
 
 export default class Movie extends Component {
@@ -34,41 +32,13 @@ export default class Movie extends Component {
 
     render(){
 
-      const { posters } = this.state
 
       return(
 
         <div>
           <h1>Carousel of the Most Popular Movies of the Decade</h1>
-          <StyleRoot>
-              <Coverflow
-                displayQuantityOfSide={2}
-                navigation
-                infiniteScroll
-                enableHeading
-                media={{
-                  '@media (max-width: 900px)': {
-                    width: '600px',
-                    height: '300px'
-                  },
-                  '@media (min-width: 900px)': {
-                    width: '960px',
-                    height: '600px'
-                  }
-                }}
-              >
-              {
-                posters.map( (poster) => {
-                  return(
-                    <div key={poster.id} className="item">
-                      <p><strong>{poster.title}</strong></p>
-                      <img src={`https://image.tmdb.org/t/p/w300_and_h450_bestv2${poster.poster_path}`} alt="pic" style={{height: '150px', width: '100%'}}/>
-                    </div>
-                  )
-                })
-               }
-              </Coverflow>
-            </StyleRoot>
+          <TheCarousel posters= {this.state.posters} />
+
         </div>
       )
     }
