@@ -42,7 +42,7 @@ export default class Animation extends Component {
                     <li><img src={`https://image.tmdb.org/t/p/w300_and_h450_bestv2${poster.poster_path}`}/></li>
                   </ul>
                 )
-              });
+              })
             }
             <h1>carosel of Most popular animation of the decade</h1>
           </div>
