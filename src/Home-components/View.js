@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
-import { element } from 'prop-types';
+
 
 
 export default class View extends Component {
-    constructor() {
-        super();
+    constructor(props) {
+        super(props);
       }
 
     render(){
@@ -14,12 +14,12 @@ export default class View extends Component {
      let infor = element.results;
         });
 
-console.log(actionMoviesvariable)
+  console.log(actionMoviesvariable)
 
       return(
 
      <div>
-      <h1>Hello, my name is: {this.props.actionMovies} </h1>
+      <h1>hello </h1>
     </div>
 
       )
