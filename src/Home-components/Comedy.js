@@ -5,6 +5,7 @@ import './Comedy.css'
 import TheCarousel from "./TheCarousel.js"
 
 
+
 const _handleClick = () => {
   var num = Math.floor((Math.random() * 10) + 1);
   this.setState({
@@ -43,10 +44,12 @@ export default class Comedy extends Component {
 
         return(
 
+
        <div>
             <h1>hello</h1>
             <TheCarousel posters= {this.state.posters} />
         </div>
+
 
         )
       }

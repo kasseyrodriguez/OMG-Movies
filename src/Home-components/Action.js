@@ -2,7 +2,9 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import API_KEY from './config.js'
 import View from './View.js'
+
 import TheCarousel from './TheCarousel.js';
+
 
 
 export default class Action extends Component {
@@ -32,11 +34,12 @@ export default class Action extends Component {
 
     render(){
 
-   
+
 
       return(
 
         <div>
+
             <h1>hello</h1>
             <TheCarousel posters= {this.state.posters} />
             <View actionMovies= {this.state.actionMovies} />

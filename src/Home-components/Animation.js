@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import API_KEY from './config.js'
+import Coverflow from 'react-coverflow';
+import { StyleRoot } from 'radium';
+import './carousel.css'
 
 
 export default class Animation extends Component {
@@ -35,8 +38,10 @@ export default class Animation extends Component {
 
       return(
 
+
        
           <h1><strong>Carousel of Most Popular Animation of the Decade</strong></h1>
+
 
 
         )
