@@ -3,6 +3,7 @@ import axios from 'axios';
 import API_KEY from './config.js'
 import Coverflow from 'react-coverflow';
 import { StyleRoot } from 'radium';
+import './Comedy.css'
 
 
 
