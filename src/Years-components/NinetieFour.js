@@ -66,7 +66,7 @@ export default class NinetieFour extends Component {
      
         })
 
-        axios.get(`https://api.themoviedb.org/3/discover/movie?api_key=${API_K}&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=1&primary_release_year=1995&with_genres=27`)
+        axios.get(`https://api.themoviedb.org/3/discover/movie?api_key=${API_K}&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=1&primary_release_year=1994&with_genres=27`)
         .then(json => {
 
           this.setState({NinetieFourHorror:json.data})
