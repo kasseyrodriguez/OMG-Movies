@@ -15,17 +15,16 @@ class Home extends Component {
   render() {
     return (
       <div>
-      <div>
-        <Movie />
-        <Comedy />
-        <Romance />
-        <Horror />
-        <Animation />
-        <Action />
-        <Drama />
-      </div>
-
-      <TheCarousel />
+        <div>
+          <Movie />
+          <Comedy />
+          <Romance />
+          <Horror />
+          <Animation />
+          <Action />
+          <Drama />
+        </div>
+        <TheCarousel />
       </div>
     );
   }

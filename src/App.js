@@ -22,15 +22,14 @@ class App extends Component {
   render() {
     return (
 
-      
-   
-      
+
+
+
       <BrowserRouter>
      <div>
-       
 
        <ul>
-     
+   
          <li>
          <NavLink to ="/Home" exact activeStyle= {{color:'red'}}>Home</NavLink>
 
@@ -70,7 +69,7 @@ class App extends Component {
 
 
        </ul>
-   
+
        <Route path= "/" exact render = {() => {
          return (   <div className="App">
                      <NavbarFeatures/>
@@ -82,7 +81,7 @@ class App extends Component {
          return (<Home />)
        }
      }/>
-       
+
      <Route path= "/1990" exact render = {() => {
          return (<Ninetie/>)
        }
@@ -127,15 +126,9 @@ class App extends Component {
        }
      }/>
 
-
-
-
-
-
     </div>
 
       </BrowserRouter>
-    
 
     );
   }

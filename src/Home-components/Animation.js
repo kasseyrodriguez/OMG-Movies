@@ -8,32 +8,45 @@ export default class Animation extends Component {
         super(props)
         this.state = {
           animationMovies: [],
-          animationStore: []
+          animationStore: [],
+          posters: []
         }
-     
       }
- 
 
       componentDidMount(){
         const API_K = API_KEY;
-          
          axios.get(`https://api.themoviedb.org/3/discover/movie?api_key=${API_K}&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=1&primary_release_date.gte=1990&primary_release_date.lte=1999&with_genres=16`)
-        .then(json => {
-
+         .then(json => {
           this.setState({animationMovies:json.data, animationStore: json.data})
-
           console.log(this.state.animationMovies)
-     
         })
-          
+
+        axios.get(`https://api.themoviedb.org/3/discover/movie?api_key=${API_K}&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=1&primary_release_date.gte=1990&primary_release_date.lte=1999&with_genres=16`)
+        .then((response) => {
+          let posters = response.data.results;
+          this.setState({ posters })
+        })
 
     }
- 
-    render(){
-     
-return(
-<h1>carosel of Most popular animation of the decade</h1>
 
- )
- }
+    render(){
+    const { posters } = this.state;
+
+    return(
+
+          <div>
+            {
+              posters.map( (poster) => {
+                return(
+                  <ul key={poster.id}>
+                    <li><img src={`https://image.tmdb.org/t/p/w300_and_h450_bestv2${poster.poster_path}`}/></li>
+                  </ul>
+                )
+              });
+            }
+            <h1>carosel of Most popular animation of the decade</h1>
+          </div>
+          
+        )
+      }
 }
