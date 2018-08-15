@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import API_KEY from './config.js'
-
 import TheCarousel from "./TheCarousel.js"
 
 
@@ -46,7 +45,7 @@ export default class Comedy extends Component {
 
 
        <div>
-            <h1>hello</h1>
+            
             <TheCarousel posters= {this.state.posters} />
         </div>
 

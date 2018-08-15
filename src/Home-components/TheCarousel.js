@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Coverflow from 'react-coverflow';
 import { StyleRoot } from 'radium';
-//import './carousel.css'
+import './carousel.css'
 
 export default class TheCarousel extends Component {
 
@@ -40,7 +40,7 @@ export default class TheCarousel extends Component {
            }
           </Coverflow>
         </StyleRoot>
-    <h1>carosel of Most popular Comedy of the decade</h1>
+    
     </div>
 
   )
