@@ -37,6 +37,7 @@ export default class Animation extends Component {
       const { posters } = this.state;
 
       return(
+
           <div>
             <h1>Carousel of the Most Popular Animations of the Decade</h1>
             <StyleRoot>
@@ -69,6 +70,7 @@ export default class Animation extends Component {
                 </Coverflow>
               </StyleRoot>
           </div>
+
 
         )
       }
