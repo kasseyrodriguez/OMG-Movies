@@ -3,7 +3,7 @@ import axios from 'axios';
 import API_KEY from './config.js'
 import Coverflow from 'react-coverflow';
 import { StyleRoot } from 'radium';
-import './Comedy.css'
+import './carousel.css'
 
 
 
@@ -46,6 +46,7 @@ export default class Comedy extends Component {
         return(
 
           <div>
+            <h1>Carousel of the Most Popular Comedies of the decade</h1>
             <StyleRoot>
                 <Coverflow
                   displayQuantityOfSide={2}
@@ -67,6 +68,7 @@ export default class Comedy extends Component {
                   posters.map( (poster) => {
                     return(
                       <div key={poster.id} className="item">
+                        <p><strong>{poster.title}</strong></p>
                         <img src={`https://image.tmdb.org/t/p/w300_and_h450_bestv2${poster.poster_path}`} alt="pic" style={{height: '150px', width: '100%'}}/>
                       </div>
                     )
@@ -74,7 +76,6 @@ export default class Comedy extends Component {
                  }
                 </Coverflow>
               </StyleRoot>
-          <h1>carosel of Most popular Comedy of the decade</h1>
           </div>
 
         )

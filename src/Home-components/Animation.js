@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import API_KEY from './config.js'
+import Coverflow from 'react-coverflow';
+import { StyleRoot } from 'radium';
+import './carousel.css'
 
 
 export default class Animation extends Component {
@@ -35,9 +38,38 @@ export default class Animation extends Component {
 
       return(
 
-        
-          <h1><strong>Carousel of Most Popular Animation of the Decade</strong></h1>
-     
+          <div>
+            <h1>Carousel of the Most Popular Animations of the Decade</h1>
+            <StyleRoot>
+                <Coverflow
+                  displayQuantityOfSide={2}
+                  navigation
+                  infiniteScroll
+                  enableHeading
+                  media={{
+                    '@media (max-width: 900px)': {
+                      width: '600px',
+                      height: '300px'
+                    },
+                    '@media (min-width: 900px)': {
+                      width: '960px',
+                      height: '600px'
+                    }
+                  }}
+                >
+                {
+                  posters.map( (poster) => {
+                    return(
+                      <div key={poster.id} className="item">
+                        <p><strong>{poster.title}</strong></p>
+                        <img src={`https://image.tmdb.org/t/p/w300_and_h450_bestv2${poster.poster_path}`} alt="pic" style={{height: '150px', width: '100%'}}/>
+                      </div>
+                    )
+                  })
+                 }
+                </Coverflow>
+              </StyleRoot>
+          </div>
 
 
         )
