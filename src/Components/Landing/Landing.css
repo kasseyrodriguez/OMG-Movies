@@ -1,7 +1,7 @@
 #landingMain{
     background-image: url('https://i.imgur.com/P5z7CzP.png');
     background-size: cover;
-    height: 100vh;
+    height: 90vh;
     width: 100vw;
     /* position: relative; */
 }
@@ -14,14 +14,24 @@
     position: relative; */
 }
 
+#tvIMG{
+    z-index: 1;
+    position: absolute;
+    width: 100vw;
+    
+}
+
+
 #insideTV{
+    
     position: relative;
     background-color: aqua;
-    bottom: 25em; 
+    bottom: 26em; 
+
 }
 
 #otdIMG{
-    height: 20em;
+    height: 21em;
     display: block;
     margin: auto;
 }
@@ -29,7 +39,8 @@
     border: 2px;
     border-style: solid;
     border-color: blue;
-    position: absolute;
+    
+    height: 90vh;
 }
 
 .col{
