@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import API_KEY from '../../config.js'
+import Carousel from '../Genres/Carousel.js'
 
 
 export default class NinetieSeven extends Component {
@@ -25,53 +26,53 @@ export default class NinetieSeven extends Component {
          axios.get(`https://api.themoviedb.org/3/discover/movie?api_key=${API_K}&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=1&primary_release_year=1997`)
         .then(json => {
 
-          this.setState({NinetieSevenMovies:json.data, NinetieSevenStore: json.data})
+          this.setState({NinetieSevenMovies:json.data.results, NinetieSevenStore: json.data})
 
-          console.log(this.state.NinetieSevenMovies)
+          // console.log(this.state.NinetieSevenMovies)
 
         })
 
         axios.get(`https://api.themoviedb.org/3/discover/movie?api_key=${API_K}&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=1&primary_release_year=1997&with_genres=10749`)
         .then(json => {
 
-          this.setState({NinetieSevenRomance:json.data})
+          this.setState({NinetieSevenRomance:json.data.results})
 
-          console.log(this.state.NinetieSevenRomance)
+          // console.log(this.state.NinetieSevenRomance)
 
         })
         axios.get(`https://api.themoviedb.org/3/discover/movie?api_key=${API_K}&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=1&primary_release_year=1997&with_genres=28`)
         .then(json => {
 
-          this.setState({NinetieSevenAction:json.data})
+          this.setState({NinetieSevenAction:json.data.results})
 
-          console.log(this.state.NinetieSevenAction)
+          // console.log(this.state.NinetieSevenAction)
 
         })
 
         axios.get(`https://api.themoviedb.org/3/discover/movie?api_key=${API_K}&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=1&primary_release_year=1997&with_genres=18`)
         .then(json => {
 
-          this.setState({NinetieSevenDrama:json.data})
+          this.setState({NinetieSevenDrama:json.data.results})
 
-          console.log(this.state.NinetieSevenDrama)
+          // console.log(this.state.NinetieSevenDrama)
 
         })
 
         axios.get(`https://api.themoviedb.org/3/discover/movie?api_key=${API_K}&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=1&primary_release_year=1997&with_genres=16`)
         .then(json => {
 
-          this.setState({NinetieSevenAnimation:json.data})
+          this.setState({NinetieSevenAnimation:json.data.results})
 
-          console.log(this.state.NinetieSevenAnimation)
+          // console.log(this.state.NinetieSevenAnimation)
 
         })
 
         axios.get(`https://api.themoviedb.org/3/discover/movie?api_key=${API_K}&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=1&primary_release_year=1997&with_genres=27`)
         .then(json => {
 
-          this.setState({NinetieSevenHorror:json.data})
+          this.setState({NinetieSevenHorror:json.data.results})
 
-          console.log(this.state.NinetieSevenHorror)
+          // console.log(this.state.NinetieSevenHorror)
 
         })
 
@@ -79,9 +80,9 @@ export default class NinetieSeven extends Component {
         axios.get(`https://api.themoviedb.org/3/discover/movie?api_key=${API_K}&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=1&primary_release_year=1997&with_genres=35`)
         .then(json => {
 
-          this.setState({NinetieSevenComedy:json.data})
+          this.setState({NinetieSevenComedy:json.data.results})
 
-          console.log(this.state.NinetieSevenComedy)
+          // console.log(this.state.NinetieSevenComedy)
 
         })
 
@@ -94,12 +95,25 @@ export default class NinetieSeven extends Component {
       return(
         <div>
           <h1>Most popular movies of 1997</h1>
-          <h1>Most popular Comedy of of 1997</h1>
+          <Carousel posters= {this.state.NinetieSevenMovies} />
+
+           <h1>Most popular Comedy of of 1997</h1>
+          <Carousel posters= {this.state.NinetieSevenComedy} />
+
           <h1>Most popular romance of of 1997</h1>
+          <Carousel posters= {this.state.NinetieSevenRomance} />
+
           <h1>Most popular horror of of 1997</h1>
+          <Carousel posters= {this.state.NinetieSevenHorror} />
+
           <h1>Most popular animation of of 1997</h1>
+          <Carousel posters= {this.state.NinetieSevenAnimation} />
+
           <h1>Most popular action of of 1997</h1>
+          <Carousel posters= {this.state.NinetieSevenAction} />
+
           <h1>Most popular drama of of 1997</h1>
+          <Carousel posters= {this.state.NinetieSevenDrama} /> 
         </div>
 
       )
