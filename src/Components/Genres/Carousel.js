@@ -31,7 +31,7 @@ export default class Carousel extends Component {
             this.props.posters.map( (poster) => {
               return(
                 <div key={poster.id} className="item">
-                  <img src={`https://image.tmdb.org/t/p/w300_and_h450_bestv2${poster.poster_path}`} alt="pic" style={{height: '150px', width: '100%'}}/>
+                  <img src={`https://image.tmdb.org/t/p/w300_and_h450_bestv2${poster.poster_path}`} alt="pic" style={{height: '300px', width: '100%'}}/>
                 </div>
               )
             })
