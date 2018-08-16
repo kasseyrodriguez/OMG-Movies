@@ -12,6 +12,8 @@ import NinetieSix from './NinetieSix'
 import NinetieSeven from './NinetieSeven'
 import NinetieEight from './NinetieEight'
 import NinetieNine from './NinetieNine'
+import LandingPage from '../../Components/Landing.js'
+import NavbarFeatures from '../../Components/NavBar.js'
 
 
 
@@ -58,6 +60,17 @@ class App extends Component {
               <NavLink to ="/1999" exact activeStyle= {{color:'red'}}>1999</NavLink>
             </li>
           </ul>
+
+
+          <Route path= "/" exact render = {() => {
+         return (   <div className="App">
+                     <NavbarFeatures/>
+                     <LandingPage/>
+                        </div>)
+             }
+           }/>
+
+
           <Route path= "/Home" exact render = {() => {
             return (<Home />)
             }
