@@ -11,7 +11,6 @@ export default class Action extends Component {
         this.state = {
           actionMovies: [],
           actionStore: [],
-          posters: []
         }
       }
 
@@ -20,14 +19,9 @@ export default class Action extends Component {
          axios.get(`https://api.themoviedb.org/3/discover/movie?api_key=${API_K}&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=1&primary_release_date.gte=1990&primary_release_date.lte=1999&with_genres=28`)
          .then(json => {
            this.setState({actionMovies:json.data.results, actionStore: json.data})
-           console.log(this.state.actionMovies[0].title)
+      
          })
 
-         axios.get(`https://api.themoviedb.org/3/discover/movie?api_key=${API_K}&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=1&primary_release_date.gte=1990&primary_release_date.lte=1999&with_genres=28`)
-         .then((response) => {
-           let posters = response.data.results;
-           this.setState({ posters })
-         })
       }
 
     render(){
@@ -36,7 +30,7 @@ export default class Action extends Component {
 
         <div>
           <h1><strong>Most Popular Action of the Decade</strong></h1>
-          <Carousel posters= {this.state.posters} />
+          <Carousel posters= {this.state.actionMovies} />
           <View actionMovies= {this.state.actionMovies} />
         </div>
       )
