@@ -35,7 +35,7 @@ export default class Movie extends Component {
       return(
 
         <div>
-          <h1><strong>Carousel of the Most Popular Movies of the Decade</strong></h1>
+          <h1><strong>Most Popular Movies of the Decade</strong></h1>
           <Carousel posters= {this.state.posters} />
         </div>
       )

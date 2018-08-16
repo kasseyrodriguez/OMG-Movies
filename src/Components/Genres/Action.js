@@ -35,7 +35,7 @@ export default class Action extends Component {
       return(
 
         <div>
-          <h1><strong>Carousel of Most Popular Animation of the Decade</strong></h1>
+          <h1><strong>Most Popular Action of the Decade</strong></h1>
           <Carousel posters= {this.state.posters} />
           <View actionMovies= {this.state.actionMovies} />
         </div>

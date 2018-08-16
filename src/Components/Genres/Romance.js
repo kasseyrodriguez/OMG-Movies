@@ -35,7 +35,7 @@ export default class Romance extends Component {
       return(
 
         <div>
-          <h1><strong>Carousel of the Most Popular Romances of the decade</strong></h1>
+          <h1><strong>Most Popular Romances of the decade</strong></h1>
           <Carousel posters= {this.state.posters} />
         </div>
 
