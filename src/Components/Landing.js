@@ -1,5 +1,5 @@
 import React from 'react';
-import '../../css/Landing.css';
+import '../css/Landing.css';
 // import  {Carousel, CarouselCaption, CarouselInner, CarouselItem} from 'mdbreact';
 // import { Mask, Row, Col, Button, View, Container} from 'mdbreact';
 
