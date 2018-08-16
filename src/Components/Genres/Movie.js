@@ -8,26 +8,21 @@ export default class Movie extends Component {
     constructor(props){
         super(props)
         this.state = {
-          movies: [],
+          theMovies: [],
           store: [],
-          posters: []
+    
         }
       }
 
       componentDidMount(){
         const API_K = API_KEY;
-          for(let i = 1; i < 3; i++){
-            axios.get(`https://api.themoviedb.org/3/discover/movie?api_key=${API_K}&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=${i}&primary_release_date.gte=1990&primary_release_date.lte=1999`)
-              .then(json => {
-              this.setState({movies:json.data, store: json.data})
-              console.log(this.state.movies)
-            })
+         
             axios.get(`https://api.themoviedb.org/3/discover/movie?api_key=${API_K}&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=1&primary_release_date.gte=1990&primary_release_date.lte=1999`)
-            .then((response) => {
-              let posters = response.data.results;
-              this.setState({ posters })
+              .then(json => {
+              this.setState({theMovies:json.data.results, store: json.data})
             })
-          }
+       
+          
         }
 
     render(){
@@ -36,7 +31,7 @@ export default class Movie extends Component {
 
         <div>
           <h1><strong>Most Popular Movies of the Decade</strong></h1>
-          <Carousel posters= {this.state.posters} />
+          <Carousel posters= {this.state.theMovies} />
         </div>
       )
     }

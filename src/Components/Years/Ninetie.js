@@ -15,6 +15,13 @@ export default class Ninetie extends Component {
           NinetieAnimation: [],
           NinetieHorror: [],
           NinetieComedy: [],
+          posters: [],
+          postersRomance: [],
+          postersAction:[],
+          postersDrama: [],
+          postersAnimation:[],
+          postersHorror: [],
+          postersComedy: []
         }
       }
 
