@@ -1,16 +1,8 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-import API_KEY from './config.js'
-import TheCarousel from "./TheCarousel.js"
+import API_KEY from '../../config.js'
+import Carousel from "./Carousel.js"
 
-
-
-const _handleClick = () => {
-  var num = Math.floor((Math.random() * 10) + 1);
-  this.setState({
-    active: num
-  });
-}
 
 export default class Comedy extends Component {
     constructor(props){
@@ -39,18 +31,14 @@ export default class Comedy extends Component {
       }
 
     render(){
- 
 
         return(
 
-
-       <div>
-            
-            <TheCarousel posters= {this.state.posters} />
-        </div>
-
+          <div>
+            <h1><strong>Carousel of Most Popular Animation of the Decade</strong></h1>
+            <Carousel posters= {this.state.posters} />
+          </div>
 
         )
       }
-
   }

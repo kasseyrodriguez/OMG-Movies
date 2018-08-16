@@ -12,7 +12,7 @@ export default class View extends Component {
         let actionMoviesvariable = this.props.actionMovies.map((element, index )=> {
      let infor = element;
      let title = infor.title;
- 
+
      console.log(title)
 
         });
