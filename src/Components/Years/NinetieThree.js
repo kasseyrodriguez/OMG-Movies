@@ -95,7 +95,7 @@ export default class NinetieThree extends Component {
       return(
 
         <div>
-        <h1>Most popular movies of 1993</h1>
+           <h1>Most popular movies of 1993</h1>
           <Carousel posters= {this.state.NinetieThreeMovies} />
 
            <h1>Most popular Comedy of of 1993</h1>
