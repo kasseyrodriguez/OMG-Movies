@@ -1,30 +1,25 @@
-import React, { Component } from 'react';
-
-
+import React, { Component } from "react";
+import MoviePage from "./MoviePage.js";
 
 export default class View extends Component {
-    constructor(props) {
-        super(props);
+  render() {
+    const actionMoviesvariable = this.props.actionMovies.map(
+      (element, index) => {
+        return (
+          <MoviePage
+            title={element.title}
+            overview={element.overview}
+            rating={element.vote_average}
+          />
+        );
       }
+    );
 
-    render(){
-
-        let actionMoviesvariable = this.props.actionMovies.map((element, index )=> {
-     let infor = element;
-     let title = infor.title;
-
-     console.log(title)
-
-        });
-
-  console.log(actionMoviesvariable)
-
-      return(
-
-     <div>
-      <h1>hello </h1>
-    </div>
-
-      )
-    }
+    return (
+      <div>
+        hello
+        <MoviePage /> 
+      </div>
+    );
+  }
 }
