@@ -1,20 +1,19 @@
-import React, {Component} from 'react'
+import React from 'react'
+
+const MoviePage = (props) => (
 
 
-export default class MoviePage extends Component {
 
-render(){
-console.log(this.props)
-return(
+
     <div>
 
         <p>
-            fskjfksjfkjsfdkj
-            {/* {props.movie} */}
+        
+testing
         </p>
       </div>
     )
 
 
-}
-}
+
+export default MoviePage
