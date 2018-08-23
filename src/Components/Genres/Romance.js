@@ -10,7 +10,7 @@ export default class Romance extends Component {
         this.state = {
           romanceMovies: [],
           romanceStore: [],
-          posters: []
+     
         }
       }
 
@@ -19,15 +19,10 @@ export default class Romance extends Component {
 
          axios.get(`https://api.themoviedb.org/3/discover/movie?api_key=${API_K}&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=1&primary_release_date.gte=1990&primary_release_date.lte=1999&with_genres=10749`)
         .then(json => {
-          this.setState({romanceMovies:json.data, romanceStore: json.data})
-          console.log(this.state.romanceMovies)
+          this.setState({romanceMovies:json.data.results, romanceStore: json.data})
         })
 
-        axios.get(`https://api.themoviedb.org/3/discover/movie?api_key=${API_K}&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=1&primary_release_date.gte=1990&primary_release_date.lte=1999&with_genres=10749`)
-        .then((response) => {
-          let posters = response.data.results;
-          this.setState({ posters })
-        })
+ 
       }
 
     render(){
@@ -36,7 +31,7 @@ export default class Romance extends Component {
 
         <div>
           <h1><strong>Most Popular Romances of the decade</strong></h1>
-          <Carousel posters= {this.state.posters} />
+          <Carousel posters= {this.state.romanceMovies} />
         </div>
 
       )

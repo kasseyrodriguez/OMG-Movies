@@ -4,7 +4,13 @@ import { StyleRoot } from 'radium';
 import '../../css/Carousel.css'
 
 export default class Carousel extends Component {
-
+viewMovie() {
+  // console.log("Trying to view movie")
+  // console.log(this.props.posters.title)
+  // console.log(this)
+  const url = "https://www.themoviedb.org/movie/" + this.id
+  window.location.href = url;
+}
   render(){
 
   return(
@@ -31,7 +37,7 @@ export default class Carousel extends Component {
             this.props.posters.map( (poster) => {
               return(
                 <div key={poster.id} className="item">
-                  <img src={`https://image.tmdb.org/t/p/w300_and_h450_bestv2${poster.poster_path}`} alt="pic" style={{height: '300px', width: '100%'}}/>
+                  <img src={`https://image.tmdb.org/t/p/w300_and_h450_bestv2${poster.poster_path}`} alt="pic" style={{height: '300px', width: '100%'}}  onClick={this.viewMovie.bind(poster)}/>
                 </div>
               )
             })

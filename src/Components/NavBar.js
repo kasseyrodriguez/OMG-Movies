@@ -31,7 +31,7 @@ class NavbarFeatures extends Component {
             <Router>
                 <Navbar color="pink accent-2" dark expand="md" scrolling>
                     <NavbarBrand href="/">
-                        <strong>OMG Movies</strong>
+                    <img src= {require("../css/movieLogo.png")}  alt="logo" height="200px" width= "200px"/>
                     </NavbarBrand>
                     { !this.state.isWideEnough && <NavbarToggler onClick = { this.onClick } />}
                     <Collapse isOpen = { this.state.collapse } navbar>
