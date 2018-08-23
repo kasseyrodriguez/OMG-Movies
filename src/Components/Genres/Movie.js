@@ -8,8 +8,7 @@ export default class Movie extends Component {
     constructor(props){
         super(props)
         this.state = {
-          theMovies: [],
-          store: [],
+          theMovies: []
     
         }
       }
@@ -19,7 +18,7 @@ export default class Movie extends Component {
          
             axios.get(`https://api.themoviedb.org/3/discover/movie?api_key=${API_K}&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=1&primary_release_date.gte=1990&primary_release_date.lte=1999`)
               .then(json => {
-              this.setState({theMovies:json.data.results, store: json.data})
+              this.setState({theMovies:json.data.results})
             })
        
           

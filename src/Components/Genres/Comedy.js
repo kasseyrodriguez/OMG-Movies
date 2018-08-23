@@ -9,7 +9,6 @@ export default class Comedy extends Component {
         super(props)
         this.state = {
           comedyMovies: [],
-          comedyStore: [],
           active: 0
         }
       }
@@ -18,7 +17,7 @@ export default class Comedy extends Component {
         const API_K = API_KEY;
          axios.get(`https://api.themoviedb.org/3/discover/movie?api_key=${API_K}&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=1&primary_release_date.gte=1990&primary_release_date.lte=1999&with_genres=35`)
          .then(json => {
-          this.setState({comedyMovies:json.data.results, comedyStore: json.data})
+          this.setState({comedyMovies:json.data.results})
         
         })
 

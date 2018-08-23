@@ -9,7 +9,6 @@ export default class NinetieEight extends Component {
         super(props)
         this.state = {
           NinetieEightMovies: [],
-          NinetieEightStore: [],
           NinetieEightRomance: [],
           NinetieEightAction: [],
           NinetieEightDrama: [],
@@ -26,7 +25,7 @@ export default class NinetieEight extends Component {
          axios.get(`https://api.themoviedb.org/3/discover/movie?api_key=${API_K}&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=1&primary_release_year=1998`)
         .then(json => {
 
-          this.setState({NinetieEightMovies:json.data.results, NinetieEightStore: json.data})
+          this.setState({NinetieEightMovies:json.data.results})
 
           // console.log(this.state.NinetieEightMovies)
 

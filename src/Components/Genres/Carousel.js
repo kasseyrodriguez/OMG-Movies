@@ -2,13 +2,11 @@ import React, { Component } from 'react';
 import Coverflow from 'react-coverflow';
 import { StyleRoot } from 'radium';
 import '../../css/Carousel.css'
-import MoviePage from './MoviePage.js'
+
 
 export default class Carousel extends Component {
 viewMovie() {
-// console.log(this)
-  // return(<MoviePage   movieId={ this.match.params.id } />)
-  // const url = "https://www.themoviedb.org/movie/" + this.id
+
   window.location.href = `/movie/${this.id}`;
   
 
