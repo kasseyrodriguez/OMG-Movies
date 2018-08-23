@@ -35,7 +35,7 @@ export default class Animation extends Component {
       return(
 
           <div>
-            <h1><strong>Most Popular Animation of the Decade</strong></h1>
+            <h1><strong>Carousel of Most Popular Animation of the Decade</strong></h1>
             <Carousel posters= {this.state.posters} />
           </div>
 
