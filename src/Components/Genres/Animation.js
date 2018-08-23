@@ -10,7 +10,7 @@ export default class Animation extends Component {
         this.state = {
           animationMovies: [],
           animationStore: [],
-     
+
         }
       }
 
@@ -19,7 +19,7 @@ export default class Animation extends Component {
          axios.get(`https://api.themoviedb.org/3/discover/movie?api_key=${API_K}&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=1&primary_release_date.gte=1990&primary_release_date.lte=1999&with_genres=16`)
          .then(json => {
           this.setState({animationMovies:json.data.results, animationStore: json.data})
-          
+
         })
 
     }
