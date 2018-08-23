@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import Coverflow from 'react-coverflow';
 import { StyleRoot } from 'radium';
 import '../../css/Carousel.css'
-import MoviePage from './MoviePage.js'
+
 
 export default class Carousel extends Component {
 viewMovie() {

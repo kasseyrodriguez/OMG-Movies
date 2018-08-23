@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import API_KEY from '../../config.js'
-import View from './View.js'
 import Carousel from './Carousel.js';
 
 
@@ -30,7 +29,6 @@ export default class Action extends Component {
         <div>
           <h1><strong>Most Popular Action of the Decade</strong></h1>
           <Carousel posters= {this.state.actionMovies} />
-          <View actionMovies= {this.state.actionMovies} />
         </div>
       )
     }
