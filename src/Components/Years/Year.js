@@ -14,6 +14,7 @@ import NinetieEight from './NinetieEight'
 import NinetieNine from './NinetieNine'
 import LandingPage from '../../Components/Landing.js'
 import NavbarFeatures from '../../Components/NavBar.js'
+import MoviePage from '../Genres/MoviePage';
 
 
 
@@ -115,6 +116,9 @@ class App extends Component {
            return (<NinetieNine/>)
            }
          }/>
+
+        <Route path="/movie/:movieId" component={ MoviePage } />
+        
       </div>
     </BrowserRouter>
     );
