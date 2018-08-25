@@ -28,9 +28,12 @@ export default class MoviePage extends Component {
   render() {
     return (
       <div>
-        hello
-    
-      </div>
+     <h1>Title: {this.state.movie.title}</h1>
+     <h1>Rating: {this.state.movie.vote_average}</h1>
+     <h1>Overview: {this.state.movie.overview}</h1>
+     <h1>Release date: {this.state.movie.release_date}</h1>
+     <h1>Runtime: {this.state.movie.runtime}</h1>
+     </div>
     );
   }
 }
