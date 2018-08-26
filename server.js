@@ -11,7 +11,7 @@ var query = "&q=toy+story&limit=3";
 
 
 
-app.get('/', async (req, res) => {
+app.get('/api', async (req, res) => {
 	let {data} = await axios.get(api + apikey + query);
 	res.send(data);
 });

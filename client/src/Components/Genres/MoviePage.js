@@ -7,7 +7,8 @@ export default class MoviePage extends Component {
     constructor(props){
         super(props)
         this.state = {
-            movie: []
+            movie: [],
+            gifs: []
      
         }
       }
@@ -23,6 +24,15 @@ export default class MoviePage extends Component {
           console.log(this.state.movie)
 
         })
+
+
+        axios.get("/api")
+        .then(json => {
+       
+         this.setState({gifs:json.data.data})
+         console.log(this.state.gifs)
+
+       })
 
 
     }
