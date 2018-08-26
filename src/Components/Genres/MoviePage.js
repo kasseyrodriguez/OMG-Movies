@@ -24,6 +24,7 @@ export default class MoviePage extends Component {
 
         })
 
+
     }
   render() {
     return (
