@@ -6,7 +6,7 @@ app.get('/', (req, res) => res.send("Hello!"));
 
 var api = 'https://api.giphy.com/v1/gifs/search?';
 var apikey = "&api_key=zBgx2F4PBeszRUFVWpmuY6EDmaRQgdVA";
-var query = "&q=rainbow";
+var query = "&q=toy+story&limit=3";
 
 axios.get(api + apikey + query)
 .then(function (response) {
