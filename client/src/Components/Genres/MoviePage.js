@@ -4,58 +4,45 @@ import API_KEY from '../../config.js'
 
 
 export default class MoviePage extends Component {
-    constructor(props){
-        super(props)
-        this.state = {
-            movie: [],
-            gifs: [],
-            gifs1:[],
-            gifs2:[]
-     
-        }
+      constructor(){
+        super();
+        this.state = {thisMovie:{
+          title:'',
+          vote_average:'',
+          overview:'',
+          release_date:'',
+          runtime: ''
+        },
+        giphyImage: []
       }
 
-      componentDidMount(){
+      }
+
+      async componentDidMount(){
         const API_K = API_KEY;
-      
+        let res = await axios.get(`https://api.themoviedb.org/3/movie/${this.props.match.params.movieId}?api_key=${API_K}&language=en-US`);
+        let thisMovie = res.data;
+        let movie_url = `/api/${thisMovie.title}`;
+        console.log(movie_url);
+        let giphy = await axios.get(movie_url);
+        let picture= giphy.data.data[0].images.original.url;
+        this.setState({thisMovie});
+        this.setState({giphyImage: picture})
+        console.log(this.state.giphyImage)
+      }
 
-         axios.get(`https://api.themoviedb.org/3/movie/${this.props.match.params.movieId}?api_key=${API_K}&language=en-US`)
-         .then(json => {
-        
-          this.setState({movie:json.data})
-          console.log(this.state.movie)
-
-        })
-
-
-        axios.get("/api")
-        .then(json => {
-            this.setState({gifs:json.data.data[0].images.original.url})
-            console.log(this.state.gifs)
-       })
-
-       axios.get("/api")
-       .then(json => {
-           this.setState({gifs1:json.data.data[1].images.original.url})
-           console.log(this.state.gifs1)
-      })
-
-       axios.get("/api")
-       .then(json => {
-           this.setState({gifs2:json.data.data[2].images.original.url})
-           console.log(this.state.gifs2)
-      })
-
-    }
   render() {
     return (
       <div>
-     <h1>Title: {this.state.movie.title}</h1>
-     <h1>Rating: {this.state.movie.vote_average}</h1>
-     <h1>Overview: {this.state.movie.overview}</h1>
-     <h1>Release date: {this.state.movie.release_date}</h1>
-     <h1>Runtime: {this.state.movie.runtime}</h1>
-     </div>
+        <h1>Title: {this.state.thisMovie.title}</h1>
+        <h1>Rating: {this.state.thisMovie.vote_average}</h1>
+        <h1>Overview: {this.state.thisMovie.overview}</h1>
+        <h1>Release date: {this.state.thisMovie.release_date}</h1>
+        <h1>Runtime: {this.state.thisMovie.runtime}</h1>
+        <img src={this.state.giphyImage} alt="movie gif"/>
+
+      </div>
+
     );
   }
 }
