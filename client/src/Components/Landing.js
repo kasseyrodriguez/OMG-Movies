@@ -1,10 +1,10 @@
-import React from 'react';
+import React, {Component} from 'react';
 import '../css/Landing.css';
 // import  {Carousel, CarouselCaption, CarouselInner, CarouselItem} from 'mdbreact';
 // import { Mask, Row, Col, Button, View, Container} from 'mdbreact';
 
 
-class LandingPage extends React.Component {
+export default class LandingPage extends Component {
 
   render(){
 
@@ -22,5 +22,3 @@ class LandingPage extends React.Component {
     );
   }
 };
-
-export default LandingPage;

@@ -5,17 +5,17 @@ import Carousel from '../Genres/Carousel.js'
 
 
 
-export default class NinetieFive extends Component {
+export default class NinetyFive extends Component {
     constructor(props){
         super(props)
         this.state = {
-          NinetieFiveMovies: [],
-          NinetieFiveRomance: [],
-          NinetieFiveAction: [],
-          NinetieFiveDrama: [],
-          NinetieFiveAnimation: [],
-          NinetieFiveHorror: [],
-          NinetieFiveComedy: [],
+          NinetyFiveMovies: [],
+          NinetyFiveRomance: [],
+          NinetyFiveAction: [],
+          NinetyFiveDrama: [],
+          NinetyFiveAnimation: [],
+          NinetyFiveHorror: [],
+          NinetyFiveComedy: [],
         }
 
       }
@@ -26,53 +26,53 @@ export default class NinetieFive extends Component {
          axios.get(`https://api.themoviedb.org/3/discover/movie?api_key=${API_K}&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=1&primary_release_year=1995`)
         .then(json => {
 
-          this.setState({NinetieFiveMovies:json.data.results})
+          this.setState({NinetyFiveMovies:json.data.results})
 
-          // console.log(this.state.NinetieFiveMovies)
+          // console.log(this.state.NinetyFiveMovies)
 
         })
 
         axios.get(`https://api.themoviedb.org/3/discover/movie?api_key=${API_K}&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=1&primary_release_year=1995&with_genres=10749`)
         .then(json => {
 
-          this.setState({NinetieFiveRomance:json.data.results})
+          this.setState({NinetyFiveRomance:json.data.results})
 
-          // console.log(this.state.NinetieFiveRomance)
+          // console.log(this.state.NinetyFiveRomance)
 
         })
         axios.get(`https://api.themoviedb.org/3/discover/movie?api_key=${API_K}&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=1&primary_release_year=1995&with_genres=28`)
         .then(json => {
 
-          this.setState({NinetieFiveAction:json.data.results})
+          this.setState({NinetyFiveAction:json.data.results})
 
-          // console.log(this.state.NinetieFivetAction)
+          // console.log(this.state.NinetyFivetAction)
 
         })
 
         axios.get(`https://api.themoviedb.org/3/discover/movie?api_key=${API_K}&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=1&primary_release_year=1995&with_genres=18`)
         .then(json => {
 
-          this.setState({NinetieFiveDrama:json.data.results})
+          this.setState({NinetyFiveDrama:json.data.results})
 
-          // console.log(this.state.NinetieFiveDrama)
+          // console.log(this.state.NinetyFiveDrama)
 
         })
 
         axios.get(`https://api.themoviedb.org/3/discover/movie?api_key=${API_K}&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=1&primary_release_year=1995&with_genres=16`)
         .then(json => {
 
-          this.setState({NinetieFiveAnimation:json.data.results})
+          this.setState({NinetyFiveAnimation:json.data.results})
 
-          // console.log(this.state.NinetieFiveAnimation)
+          // console.log(this.state.NinetyFiveAnimation)
 
         })
 
         axios.get(`https://api.themoviedb.org/3/discover/movie?api_key=${API_K}&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=1&primary_release_year=1995&with_genres=27`)
         .then(json => {
 
-          this.setState({NinetieFiveHorror:json.data.results})
+          this.setState({NinetyFiveHorror:json.data.results})
 
-          // console.log(this.state.NinetieFiveHorror)
+          // console.log(this.state.NinetyFiveHorror)
 
         })
 
@@ -80,9 +80,9 @@ export default class NinetieFive extends Component {
         axios.get(`https://api.themoviedb.org/3/discover/movie?api_key=${API_K}&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=1&primary_release_year=1995&with_genres=35`)
         .then(json => {
 
-          this.setState({NinetieFiveComedy:json.data.results})
+          this.setState({NinetyFiveComedy:json.data.results})
 
-          // console.log(this.state.NinetieFiveComedy)
+          // console.log(this.state.NinetyFiveComedy)
 
         })
 
@@ -94,25 +94,25 @@ export default class NinetieFive extends Component {
         
         <div>
         <h1>Most popular movies of 1995</h1>
-          <Carousel posters= {this.state.NinetieFiveMovies} />
+          <Carousel posters= {this.state.NinetyFiveMovies} />
 
           <h1>Most popular Comedy of of 1995</h1>
-          <Carousel posters= {this.state.NinetieFiveComedy} />
+          <Carousel posters= {this.state.NinetyFiveComedy} />
 
           <h1>Most popular romance of of 1995</h1>
-          <Carousel posters= {this.state.NinetieFiveRomance} />
+          <Carousel posters= {this.state.NinetyFiveRomance} />
 
           <h1>Most popular horror of of 1995</h1>
-          <Carousel posters= {this.state.NinetieFiveHorror} />
+          <Carousel posters= {this.state.NinetyFiveHorror} />
 
           <h1>Most popular animation of of 1995</h1>
-          <Carousel posters= {this.state.NinetieFiveAnimation} />
+          <Carousel posters= {this.state.NinetyFiveAnimation} />
 
           <h1>Most popular action of of 1995</h1>
-          <Carousel posters= {this.state.NinetieFiveAction} />
+          <Carousel posters= {this.state.NinetyFiveAction} />
 
           <h1>Most popular drama of of 1995</h1>
-          <Carousel posters= {this.state.NinetieFiveDrama} />
+          <Carousel posters= {this.state.NinetyFiveDrama} />
         </div>
 
       )
