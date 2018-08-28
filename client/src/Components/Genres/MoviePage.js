@@ -32,17 +32,21 @@ export default class MoviePage extends Component {
       }
 
   render() {
-    return (
-      <div>
-        <h1>Title: {this.state.thisMovie.title}</h1>
-        <h1>Rating: {this.state.thisMovie.vote_average}</h1>
-        <h1>Overview: {this.state.thisMovie.overview}</h1>
-        <h1>Release date: {this.state.thisMovie.release_date}</h1>
-        <h1>Runtime: {this.state.thisMovie.runtime}</h1>
-        <img src={this.state.giphyImage} alt="movie gif"/>
 
-      </div>
+    return (
+
+      <div className="container">
+        <h1>{this.state.thisMovie.title}</h1>
+        <img src={`https://image.tmdb.org/t/p/w300_and_h450_bestv2${this.state.thisMovie.poster_path}`} alt="#" />
+        <h1>Rating: {this.state.thisMovie.vote_average}</h1>
+        <h1>Overview</h1>
+        <h3>{this.state.thisMovie.overview}</h3>
+        <h1>Release date: {this.state.thisMovie.release_date}</h1>
+        <h1>Runtime: {this.state.thisMovie.runtime} Minutes</h1>
+        <img src={this.state.giphyImage} alt="movie gif"/>
+     </div>
 
     );
+
   }
 }
