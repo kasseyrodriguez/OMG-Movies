@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import API_KEY from '../../config.js'
 import Carousel from './Carousel.js';
+import Responsive from './Responsive.js';
 
 
 export default class Drama extends Component {
@@ -27,9 +28,9 @@ export default class Drama extends Component {
 
       return(
 
-        <div>
+        <div className="dramaCont">
           <h1><strong>Most Popular Dramas of the Decade</strong></h1>
-          <Carousel posters= {this.state.dramaMovies} />
+          <Responsive posters= {this.state.dramaMovies} />
         </div>
 
       )

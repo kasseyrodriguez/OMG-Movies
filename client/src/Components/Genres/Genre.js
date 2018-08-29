@@ -6,13 +6,16 @@ import Horror from './Horror';
 import Animation from './Animation';
 import Action from './Action';
 import Drama from './Drama';
+import "../../css/slick.css"; 
+import "../../css/slick-theme.css";
+import "../../css/Genre.css";
 
 
 export default class Genre extends Component {
   render() {
     return (
-      <div>
-        <div>
+      <div className="genrePage">
+        <div className="genreSub">
           <Movie />
           <hr/>
           <Comedy />

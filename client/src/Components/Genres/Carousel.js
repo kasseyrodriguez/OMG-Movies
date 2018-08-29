@@ -4,6 +4,7 @@ import { StyleRoot } from 'radium';
 import '../../css/Carousel.css'
 
 
+
 export default class Carousel extends Component {
 viewMovie() {
 
@@ -15,7 +16,7 @@ viewMovie() {
 
   return(
 
-    <div>
+    <div className="oldCarousel">
       <StyleRoot>
           <Coverflow
             displayQuantityOfSide={2}

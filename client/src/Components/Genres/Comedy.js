@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import API_KEY from '../../config.js'
 import Carousel from "./Carousel.js"
+import Responsive from './Responsive.js';
 
 
 export default class Comedy extends Component {
@@ -28,9 +29,9 @@ export default class Comedy extends Component {
 
         return(
 
-          <div>
+          <div className="comedyCont">
             <h1><strong>Most Popular Comedy of the Decade</strong></h1>
-            <Carousel posters= {this.state.comedyMovies} />
+            <Responsive posters= {this.state.comedyMovies} />
           </div>
 
         )

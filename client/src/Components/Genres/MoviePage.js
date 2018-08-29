@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import axios from 'axios';
 import API_KEY from '../../config.js'
-
+import Responsive from './Responsive.js';
 
 export default class MoviePage extends Component {
       constructor(){

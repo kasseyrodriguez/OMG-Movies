@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import API_KEY from '../../config.js'
 import Carousel from './Carousel.js';
+import Responsive from './Responsive.js';
 
 
 export default class Horror extends Component {
@@ -28,9 +29,9 @@ export default class Horror extends Component {
 
       return(
 
-        <div>
+        <div className="horrorCont">
           <h1><strong>Most Popular Horrors of the Decade</strong></h1>
-          <Carousel posters= {this.state.horrorMovies} />
+          <Responsive posters= {this.state.horrorMovies} />
         </div>
 
       )
