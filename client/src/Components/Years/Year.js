@@ -3,15 +3,6 @@ import Home from "../Home";
 import {BrowserRouter, NavLink} from 'react-router-dom';
 import Route from 'react-router-dom/Route';
 import Ninety from './Ninety'
-import NinetyOne from './NinetyOne'
-import NinetyTwo from './NinetyTwo'
-import NinetyThree from './NinetyThree'
-import NinetyFour from './NinetyFour'
-import NinetyFive from './NinetyFive'
-import NinetySix from './NinetySix'
-import NinetySeven from './NinetySeven'
-import NinetyEight from './NinetyEight'
-import NinetyNine from './NinetyNine'
 import LandingPage from '../../Components/Landing.js'
 import NavbarFeatures from '../../Components/NavBar.js'
 import MoviePage from '../Genres/MoviePage';
@@ -90,43 +81,43 @@ export default class App extends Component {
             }
           }/>
           <Route path= "/1990" exact render = {() => {
-            return (<Ninety/>)
+            return (<Ninety year={0}/>)
             }
           }/>
          <Route path= "/1991" exact render = {() => {
-           return (<NinetyOne/>)
+           return (<Ninety year={1}/>)
            }
           }/>
          <Route path= "/1992" exact render = {() => {
-           return (<NinetyTwo/>)
+           return (<Ninety year={2}/>)
            }
           }/>
           <Route path= "/1993" exact render = {() => {
-            return (<NinetyThree/>)
+            return (<Ninety year ={3}/>)
             }
           }/>
           <Route path= "/1994" exact render = {() => {
-            return (<NinetyFour/>)
+            return (<Ninety year={4}/>)
             }
           }/>
           <Route path= "/1995" exact render = {() => {
-            return (<NinetyFive/>)
+            return (<Ninety year={5}/>)
             }
           }/>
          <Route path= "/1996" exact render = {() => {
-           return (<NinetySix/>)
+           return (<Ninety year={6}/>)
            }
           }/>
          <Route path= "/1997" exact render = {() => {
-           return (<NinetySeven/>)
+           return (<Ninety year={7}/>)
           }
          }/>
          <Route path= "/1998" exact render = {() => {
-           return (<NinetyEight/>)
+           return (<Ninety year={8}/>)
            }
          }/>
          <Route path= "/1999" exact render = {() => {
-           return (<NinetyNine/>)
+           return (<Ninety year={9}/>)
            }
          }/>
          <Route path= "/marquee" exact render = {() => {
