@@ -3,6 +3,7 @@ import axios from 'axios';
 import API_KEY from '../../config.js'
 import Carousel from './Carousel.js';
 import Responsive from './Responsive.js';
+import "../../css/Movie.css";
 
 export default class Movie extends Component {
     constructor(props){

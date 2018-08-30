@@ -15,7 +15,7 @@ import NinetyNine from './NinetyNine'
 import LandingPage from '../../Components/Landing.js'
 import NavbarFeatures from '../../Components/NavBar.js'
 import MoviePage from '../Genres/MoviePage';import { Navbar, NavbarBrand, NavbarNav, NavbarToggler, Collapse, NavItem, Dropdown, DropdownToggle, DropdownMenu, DropdownItem } from 'mdbreact';
-
+import Marquee from './Marquee.js'
 
 
 export default class App extends Component {
@@ -126,6 +126,10 @@ export default class App extends Component {
          }/>
          <Route path= "/1999" exact render = {() => {
            return (<NinetyNine/>)
+           }
+         }/>
+         <Route path= "/marquee" exact render = {() => {
+           return (<Marquee/>)
            }
          }/>
 
