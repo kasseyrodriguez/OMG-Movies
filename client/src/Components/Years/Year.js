@@ -14,7 +14,8 @@ import NinetyEight from './NinetyEight'
 import NinetyNine from './NinetyNine'
 import LandingPage from '../../Components/Landing.js'
 import NavbarFeatures from '../../Components/NavBar.js'
-import MoviePage from '../Genres/MoviePage';import { Navbar, NavbarBrand, NavbarNav, NavbarToggler, Collapse, NavItem, Dropdown, DropdownToggle, DropdownMenu, DropdownItem } from 'mdbreact';
+import MoviePage from '../Genres/MoviePage';
+import { Navbar, NavbarBrand, NavbarNav, NavbarToggler, Collapse, NavItem, Dropdown, DropdownToggle, DropdownMenu, DropdownItem } from 'mdbreact';
 import Marquee from './Marquee.js'
 
 
